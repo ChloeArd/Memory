@@ -1,11 +1,24 @@
 let win = 0;
 let score = document.getElementById("score");
 let cards = document.getElementsByClassName("case");
-let randomCards = cards[Math.floor(Math.random() * cards.length)]; //Supprime ???????????????????
-let cardss = ["case1", "case2", "case3", "case4", "case5", "case6", "case7", "case8", "case9", "case10", "case11", "case12"];
-let randomCardss;
-let image = document.getElementsByTagName("img");
-let nbClick = 0;
+let image = [
+    "https://cdn.discordapp.com/attachments/689017273050202134/798839709166075925/unknown.png",
+    "https://cdn.discordapp.com/attachments/689017273050202134/798845534882234368/unknown.png",
+    "https://cdn.discordapp.com/attachments/689017273050202134/798846022863814696/unknown.png",
+    "https://cdn.discordapp.com/attachments/689017273050202134/798846246017695764/unknown.png",
+    "https://cdn.discordapp.com/attachments/689017273050202134/798846526813110302/unknown.png",
+    "https://cdn.discordapp.com/attachments/689017273050202134/798847407563079720/unknown.png"
+]
+let randomImage = image[Math.floor(Math.random() * image.length)];
+let randomCards = cards[Math.floor(Math.random() * cards.length)];
+
+let selectImage = [];
+for(let i = 0; i < 6; i++){
+    let selectImage2 = selectImage[randomImage];
+    selectImage.push(selectImage);
+    selectImage.push(selectImage);
+    selectImage2.splice(randomImage, 1);
+}
 
 
 
@@ -47,73 +60,9 @@ for(let i = 0; i < 12; i++){
     else if (i === 11){
         imageCards("https://cdn.discordapp.com/attachments/689017273050202134/798847407563079720/unknown.png" ); //image black widow
     }
+    //faire un condition pour qu'ils n'ont pas la meme cartes !!!!!!!!!!!!!!!!!!
 }
-
-clickCards(0);
-clickCards(1);
-clickCards(2);
-clickCards(3);
-clickCards(4);
-clickCards(5);
-clickCards(6);
-clickCards(7);
-clickCards(8);
-clickCards(9);
-clickCards(10);
-clickCards(11);
-
-// limite
-for (let i = 0; i < cards.length; i++){
-    cards[i].addEventListener("click", function () {
-        if (nbClick < 2){
-            clickCards(0);
-            clickCards(1);
-            clickCards(2);
-            clickCards(3);
-            clickCards(4);
-            clickCards(5);
-            clickCards(6);
-            clickCards(7);
-            clickCards(8);
-            clickCards(9);
-            clickCards(10);
-            clickCards(11);
-            nbClick++;
-        }
-        else if(nbClick === 2 ){
-            for (let i = 0; i < image.length; i++) {
-                image[i].style.display = "none";
-                nbClick = 1;
-            }
-        }
-    });
-}
-
-//create an image with a url in a cards randomly and delete the id on cardss, for no repeat
-function imageCards(URL){
-    randomCardss = cardss[Math.floor(Math.random() * cardss.length)];
-    let createimg = document.createElement("img");
-    createimg.src = URL;
-    let index = cardss.indexOf(randomCardss);
-    document.getElementById(randomCardss).append(createimg);
-    //delete the word on array cardss
-    cardss.splice(index, 1);
-}
-
-// when you click on a card, its image appears
-function clickCards(index){
-    for (let i = index; i < cards.length; i++){
-        cards[index].addEventListener("click", function () {
-            for (let i = index; i < image.length; i++) {
-                if (event = "click") {
-                    image[index].style.display = "block";
-                }
-            }
-        });
-    }
-}
-
-// score ajout 1 when click on cards
+// click on cards
 for (let i = 0; i < cards.length; i++){
     cards[i].addEventListener("click", function () {
         // a mettre si 2 cartes sont identiques !!!!!!!!!!!!!!!!!!
@@ -122,6 +71,17 @@ for (let i = 0; i < cards.length; i++){
         //faire une condition que si elles ont les meme url alors monter score sinon rien on recommence !!!!!!!!!!!!!!
     })
 }
+
+
+//create an image with a url in a cards randomly
+function imageCards(URL){
+    randomCards = cards[Math.floor(Math.random() * cards.length)];
+    let createimg = document.createElement("img");
+    createimg.src = URL;
+    randomCards.append(createimg);
+    console.log(randomCards);
+}
+
 //Check if the 2 images have the same URL and if so, we gain a point in the score, if they are not the same, no points, we start again
 function verifyURLIdentical(){
 
