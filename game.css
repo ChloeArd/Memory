@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    font-family: 'Changa', sans-serif;
+    background-color: #ED3535;
+}
+
+h1{
+    font-size: 50px;
+}
+
+#container{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.case{
+    width: 125px;
+    height: 175px;
+    border: 1px solid darkslategrey;
+    background-color: royalblue;
+    box-shadow: 5px 5px 5px darkred;
+    margin: 10px;
+    display: flex;
+    border-radius: 10px 10px;
+}
+
+.case:hover{
+    box-shadow: 5px 5px 5px white;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px 10px;
+}
