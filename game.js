@@ -1,7 +1,6 @@
 let win = 0;
 let score = document.getElementById("score");
 let cards = document.getElementsByClassName("case");
-let randomCards = cards[Math.floor(Math.random() * cards.length)]; //Supprime ???????????????????
 let cardss = ["case1", "case2", "case3", "case4", "case5", "case6", "case7", "case8", "case9", "case10", "case11", "case12"]
 let images = [
     "https://cdn.discordapp.com/attachments/689017273050202134/798839709166075925/unknown.png", //image spider-man
@@ -16,7 +15,7 @@ let images = [
     "https://cdn.discordapp.com/attachments/689017273050202134/798846526813110302/unknown.png", //image hawkeye
     "https://cdn.discordapp.com/attachments/689017273050202134/798847407563079720/unknown.png", //image black widow
     "https://cdn.discordapp.com/attachments/689017273050202134/798847407563079720/unknown.png"  //image black widow
-]
+];
 let randomCardss;
 let randomImages;
 let image = document.getElementsByTagName("img");
@@ -77,6 +76,7 @@ clickCards(10);
 clickCards(11);
 
 // limite
+//Check if the 2 images have the same URL and if so, we gain a point in the score, if they are not the same, no points, we start again
 for (let i = 0; i < cards.length; i++){
     cards[i].addEventListener("click", function () {
         if (nbClick < 2){
@@ -93,10 +93,14 @@ for (let i = 0; i < cards.length; i++){
             clickCards(10);
             clickCards(11);
             nbClick++;
-            flippedCards.push(clickCards(i));
         }
         else if(nbClick === 2 ){
             for (let i = 0; i < image.length; i++) {
+                if (image === 0){
+                    nbClick = 1;
+                    document.getElementById("case1").style.display = "none";
+                    document.getElementById("case2").style.display = "none";
+                }
                 image[i].style.display = "none";
                 nbClick = 1;
             }
@@ -115,7 +119,8 @@ function imageCards(){
     document.getElementById(randomCardss).append(createimg);
     //delete the word on array cardss
     cardss.splice(indexCardss, 1);
-    images.splice(indexImages, 1)
+    images.splice(indexImages, 1);
+
 }
 
 // when you click on a card, its image appears
@@ -134,11 +139,10 @@ for (let i = 0; i < cards.length; i++){
     cards[i].addEventListener("click", function () {
         // a mettre si 2 cartes sont identiques !!!!!!!!!!!!!!!!!!
         win++;
-        score.innerHTML =win;
-        //faire une condition que si elles ont les meme url alors monter score sinon rien on recommence !!!!!!!!!!!!!!
+        score.innerHTML = win;
     })
 }
-//Check if the 2 images have the same URL and if so, we gain a point in the score, if they are not the same, no points, we start again
-function verifyURLIdentical(){
 
-}
+//Il me reste a faire que 2 cartes avec la meme images reste en "block" et fasse gg 1 point
+//Faire qu'à la fin on puisse rejouer
+//

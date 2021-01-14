@@ -61,3 +61,29 @@ img{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+@media screen and (max-width: 800px) {
+    #container{
+        width: 80%;
+    }
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .case{
+        width: 75px;
+        height: 125px;
+    }
+}
