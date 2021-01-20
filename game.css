@@ -116,5 +116,6 @@ p{
     .case{
         width: 75px;
         height: 125px;
+        background-size: 70px 120px;
     }
 }
