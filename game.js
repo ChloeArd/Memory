@@ -111,7 +111,7 @@ for(let i = 0; i < cards.length; i++){
                     document.getElementById("window").style.display = "flex";
                     document.getElementById("scoreGame").style.display = "flex";
                     document.getElementById("replay").style.display = "flex";
-                    score.innerHTML = 6;
+                    score.innerHTML = "6 ";
 
                 }
                 else {
