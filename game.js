@@ -62,7 +62,6 @@ for(let i = 0; i < cards.length; i++){
     images.splice(indexImages, 1);
 
     cards[i].addEventListener("click", function () {
-        console.log("1.censer etre 0 et 1 : " + nbClick);
         if (nbClick < 2){
             nbClick++;
             clickCards(0);
@@ -79,7 +78,6 @@ for(let i = 0; i < cards.length; i++){
             clickCards(11);
         }
         else if(nbClick === 2 ) {
-            console.log("2.censer etre 2 : " + nbClick);
             for (let i = 0; i < image.length; i++) {
                 // Check if the 2 images are in display = "block" and if so, they disappear definitively, if they are not the same, they disappear but not definitively.
                 if (document.getElementById("imageMarvel0").style.display === "block" && document.getElementById("imageMarvel1").style.display === "block") {
@@ -109,20 +107,15 @@ for(let i = 0; i < cards.length; i++){
                 if (document.getElementById("imageMarvel0").style.visibility === "hidden" && document.getElementById("imageMarvel1").style.visibility === "hidden" && document.getElementById("imageMarvel2").style.visibility === "hidden" && document.getElementById("imageMarvel3").style.visibility === "hidden" && document.getElementById("imageMarvel4").style.visibility === "hidden" && document.getElementById("imageMarvel5").style.visibility === "hidden" && document.getElementById("imageMarvel6").style.visibility === "hidden" && document.getElementById("imageMarvel7").style.visibility === "hidden" && document.getElementById("imageMarvel8").style.visibility === "hidden" && document.getElementById("imageMarvel9").style.visibility === "hidden" && document.getElementById("imageMarvel10").style.visibility === "hidden" && document.getElementById("imageMarvel11").style.visibility === "hidden"){
                     document.getElementById("game").style.display = "none";
                     document.getElementById("window").style.display = "flex";
-                    document.getElementById("scoreGame").style.display = "flex";
-                    document.getElementById("replay").style.display = "flex";
                     score.innerHTML = "6 ";
-
                 }
                 else {
                     setTimeout(function () {
                         image[i].style.display = "none";
                         nbClick = 1;
                     }, 1000);
-
                 }
             }
-            console.log("3.censer etre 1 : " + nbClick);
             nbClick = 1;
         }
     });
