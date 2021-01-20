@@ -55,19 +55,42 @@ img{
     display: none;
 }
 
+p{
+    display: none;
+    font-size: 90px;
+    text-align: center;
+    margin: auto;
+}
+
+#window{
+    margin-top: 20px;
+    border: 1px solid black;
+    background: darkgrey;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    box-shadow: 5px 5px 5px darkred;
+    display: none;
+}
+
 #scoreGame{
     font-size: 35px;
     background-color: white;
     border-radius: 5px 5px ;
     margin-top: 5px;
     margin-bottom: 5px;
+    display: none;
 }
 
-p{
+#replay{
+    background: #ED3535;
+    color: white;
+    box-shadow: 5px 5px 5px darkslategrey;
+    border-radius: 10px 10px;
+    font-size: 40px;
+    margin-top: 60px;
     display: none;
-    font-size: 90px;
-    text-align: center;
-    margin: auto;
 }
 
 @media screen and (max-width: 800px) {
