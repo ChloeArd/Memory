@@ -122,4 +122,11 @@ p{
         height: 125px;
         background-size: 70px 120px;
     }
+    #endGame{
+        font-size: 30px;
+    }
+
+    #scoreGame {
+        font-size: 20px;
+    }
 }
