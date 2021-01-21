@@ -3,30 +3,30 @@ let score = document.getElementById("score");
 let cards = document.getElementsByClassName("case");
 let cardss = ["case1", "case2", "case3", "case4", "case5", "case6", "case7", "case8", "case9", "case10", "case11", "case12"];
 let images = [
-    "https://cdn.discordapp.com/attachments/689017273050202134/801375680847806495/unknown.png", //image spider-man
-    "https://cdn.discordapp.com/attachments/689017273050202134/801375680847806495/unknown.png", //image spider-man
-    "https://cdn.discordapp.com/attachments/689017273050202134/801375680847806495/unknown.png", //image spider-man
-    "https://cdn.discordapp.com/attachments/689017273050202134/801375680847806495/unknown.png", //image spider-man
-    "https://cdn.discordapp.com/attachments/689017273050202134/801376526783742019/unknown.png", //image iron man
-    "https://cdn.discordapp.com/attachments/689017273050202134/801376526783742019/unknown.png", //image iron man
-    "https://cdn.discordapp.com/attachments/689017273050202134/801376526783742019/unknown.png", //image iron man
-    "https://cdn.discordapp.com/attachments/689017273050202134/801376526783742019/unknown.png", //image iron man
-    "https://cdn.discordapp.com/attachments/689017273050202134/801376807310852136/unknown.png", //image captain america
-    "https://cdn.discordapp.com/attachments/689017273050202134/801376807310852136/unknown.png", //image captain america
-    "https://cdn.discordapp.com/attachments/689017273050202134/801376807310852136/unknown.png", //image captain america
-    "https://cdn.discordapp.com/attachments/689017273050202134/801376807310852136/unknown.png", //image captain america
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377011380912148/unknown.png", //image thor
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377011380912148/unknown.png", //image thor
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377011380912148/unknown.png", //image thor
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377011380912148/unknown.png", //image thor
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377517776535602/unknown.png", //image black panther
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377517776535602/unknown.png", //image black panther
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377517776535602/unknown.png", //image black panther
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377517776535602/unknown.png", //image black panther
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377849071370250/unknown.png", //image scarlet witch
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377849071370250/unknown.png", //image scarlet witch
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377849071370250/unknown.png",  //image scarlet witch
-    "https://cdn.discordapp.com/attachments/689017273050202134/801377849071370250/unknown.png"  //image scarlet witch
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764218411941918/cvgbhyun.png", //image spider-man
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764218411941918/cvgbhyun.png", //image spider-man
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764218411941918/cvgbhyun.png", //image spider-man
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764218411941918/cvgbhyun.png", //image spider-man
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764301467287562/vhjk.png", //image iron man
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764301467287562/vhjk.png", //image iron man
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764301467287562/vhjk.png", //image iron man
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764301467287562/vhjk.png", //image iron man
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764328281866310/hhjk.png", //image captain america
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764328281866310/hhjk.png", //image captain america
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764328281866310/hhjk.png", //image captain america
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764328281866310/hhjk.png", //image captain america
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764350074683412/bhjkl.png", //image thor
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764350074683412/bhjkl.png", //image thor
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764350074683412/bhjkl.png", //image thor
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764350074683412/bhjkl.png", //image thor
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764389753061416/xrt.png", //image black panther
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764389753061416/xrt.png", //image black panther
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764389753061416/xrt.png", //image black panther
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764389753061416/xrt.png", //image black panther
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764435944931338/sdfg.png", //image scarlet witch
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764435944931338/sdfg.png", //image scarlet witch
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764435944931338/sdfg.png",  //image scarlet witch
+    "https://cdn.discordapp.com/attachments/689017273050202134/801764435944931338/sdfg.png"  //image scarlet witch
 ];
 let randomCardss;
 let randomImages;
