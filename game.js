@@ -62,7 +62,7 @@ for(let i = 0; i < cards.length; i++){
     images.splice(indexImages, 1);
 
     cards[i].addEventListener("click", function () {
-        if (document.getElementById("imageMarvel0").style.visibility === "hidden" && document.getElementById("imageMarvel1").style.visibility === "hidden" && document.getElementById("imageMarvel2").style.visibility === "hidden" && document.getElementById("imageMarvel3").style.visibility === "hidden" && document.getElementById("imageMarvel4").style.visibility === "hidden" && document.getElementById("imageMarvel5").style.visibility === "hidden" && document.getElementById("imageMarvel6").style.visibility === "hidden" && document.getElementById("imageMarvel7").style.visibility === "hidden" && document.getElementById("imageMarvel8").style.visibility === "hidden" && document.getElementById("imageMarvel9").style.visibility === "hidden" && document.getElementById("imageMarvel10").style.visibility === "hidden" && document.getElementById("imageMarvel11").style.visibility === "hidden"){
+        if (document.getElementById("imageMarvel0").style.display === "block" && document.getElementById("imageMarvel1").style.display === "block" && document.getElementById("imageMarvel2").style.display === "block" && document.getElementById("imageMarvel3").style.display === "block" && document.getElementById("imageMarvel4").style.display === "block" && document.getElementById("imageMarvel5").style.display === "block" && document.getElementById("imageMarvel6").style.display === "block" && document.getElementById("imageMarvel7").style.display === "block" && document.getElementById("imageMarvel8").style.display === "block" && document.getElementById("imageMarvel9").style.display === "block" && document.getElementById("imageMarvel10").style.display === "block" && document.getElementById("imageMarvel11").style.display === "block"){
             document.getElementById("game").style.display = "none";
             document.getElementById("window").style.display = "flex";
             score.innerHTML = 6;
@@ -86,23 +86,18 @@ for(let i = 0; i < cards.length; i++){
             for (let i = 0; i < image.length; i++) {
                 // Check if the 2 images are in display = "block" and if so, they disappear definitively, if they are not the same, they disappear but not definitively.
                 if (document.getElementById("imageMarvel0").style.display === "block" && document.getElementById("imageMarvel1").style.display === "block") {
-                    image[i].style.display = "none";
                     conditionDubleCase("imageMarvel0", "imageMarvel1");
                 }
                 if (document.getElementById("imageMarvel2").style.display === "block" && document.getElementById("imageMarvel3").style.display === "block") {
-                    image[i].style.display = "none";
                     conditionDubleCase("imageMarvel2", "imageMarvel3");
                 }
                 if (document.getElementById("imageMarvel4").style.display === "block" && document.getElementById("imageMarvel5").style.display === "block") {
-                    image[i].style.display = "none";
                     conditionDubleCase("imageMarvel4", "imageMarvel5");
                 }
                 if (document.getElementById("imageMarvel6").style.display === "block" && document.getElementById("imageMarvel7").style.display === "block") {
-                    image[i].style.display = "none";
                     conditionDubleCase("imageMarvel6", "imageMarvel7");
                 }
                 if (document.getElementById("imageMarvel8").style.display === "block" && document.getElementById("imageMarvel9").style.display === "block") {
-                    image[i].style.display = "none";
                     conditionDubleCase("imageMarvel8", "imageMarvel9");
                 }
                 if (document.getElementById("imageMarvel10").style.display === "block" && document.getElementById("imageMarvel11").style.display === "block") {
@@ -138,11 +133,8 @@ function clickCards(index){
 }
 
 function conditionDubleCase(id1, id2) {
-    document.getElementById(id1).style.display = "block";
-    document.getElementById(id2).style.display = "block";
-    setTimeout(function () {
-        document.getElementById(id1).style.visibility = "hidden";
-        document.getElementById(id2).style.visibility = "hidden";
-        nbClick = 2;
-    }, 3000);
+        setInterval(function () {
+            document.getElementById(id1).style.display = "block";
+            document.getElementById(id2).style.display = "block";
+        }, 1);
 }
