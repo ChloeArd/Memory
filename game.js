@@ -65,9 +65,11 @@ for(let i = 0; i < cards.length; i++){
     cards[i].addEventListener("click", function () {
         //if all the images are in display = "block", then we make the game disappear, we display the score, and the replay button
         if (document.getElementById("imageMarvel0").style.display === "block" && document.getElementById("imageMarvel1").style.display === "block" && document.getElementById("imageMarvel2").style.display === "block" && document.getElementById("imageMarvel3").style.display === "block" && document.getElementById("imageMarvel4").style.display === "block" && document.getElementById("imageMarvel5").style.display === "block" && document.getElementById("imageMarvel6").style.display === "block" && document.getElementById("imageMarvel7").style.display === "block" && document.getElementById("imageMarvel8").style.display === "block" && document.getElementById("imageMarvel9").style.display === "block" && document.getElementById("imageMarvel10").style.display === "block" && document.getElementById("imageMarvel11").style.display === "block"){
-            document.getElementById("game").style.display = "none";
-            document.getElementById("window").style.display = "flex";
-            score.innerHTML = 6;
+            setTimeout(function () {
+                document.getElementById("game").style.display = "none";
+                document.getElementById("window").style.display = "flex";
+                score.innerHTML = 6;
+            }, 2000);
         }
         if (nbClick < 2){
             nbClick++;
