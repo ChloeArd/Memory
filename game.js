@@ -61,7 +61,9 @@ for(let i = 0; i < cards.length; i++){
     cardss.splice(indexCardss, 1);
     images.splice(indexImages, 1);
 
+    //You can click on all the cards
     cards[i].addEventListener("click", function () {
+        //if all the images are in display = "block", then we make the game disappear, we display the score, and the replay button
         if (document.getElementById("imageMarvel0").style.display === "block" && document.getElementById("imageMarvel1").style.display === "block" && document.getElementById("imageMarvel2").style.display === "block" && document.getElementById("imageMarvel3").style.display === "block" && document.getElementById("imageMarvel4").style.display === "block" && document.getElementById("imageMarvel5").style.display === "block" && document.getElementById("imageMarvel6").style.display === "block" && document.getElementById("imageMarvel7").style.display === "block" && document.getElementById("imageMarvel8").style.display === "block" && document.getElementById("imageMarvel9").style.display === "block" && document.getElementById("imageMarvel10").style.display === "block" && document.getElementById("imageMarvel11").style.display === "block"){
             document.getElementById("game").style.display = "none";
             document.getElementById("window").style.display = "flex";
@@ -104,6 +106,7 @@ for(let i = 0; i < cards.length; i++){
                     image[i].style.display = "none";
                     conditionDubleCase("imageMarvel10", "imageMarvel11");
                 }
+                //Otherwise the images will disappear in 1s
                 else {
                     setTimeout(function () {
                         image[i].style.display = "none";
@@ -111,7 +114,6 @@ for(let i = 0; i < cards.length; i++){
                     }, 1000);
                 }
             }
-            nbClick = 1;
         }
     });
 }
@@ -132,6 +134,8 @@ function clickCards(index){
     }
 }
 
+//if 2 images are identical then they remain displayed, ie in display = "block".
+//I put a time interval of 1ms so that my images always remain displayed
 function conditionDubleCase(id1, id2) {
         setInterval(function () {
             document.getElementById(id1).style.display = "block";
