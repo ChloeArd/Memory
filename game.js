@@ -62,6 +62,11 @@ for(let i = 0; i < cards.length; i++){
     images.splice(indexImages, 1);
 
     cards[i].addEventListener("click", function () {
+        if (document.getElementById("imageMarvel0").style.visibility === "hidden" && document.getElementById("imageMarvel1").style.visibility === "hidden" && document.getElementById("imageMarvel2").style.visibility === "hidden" && document.getElementById("imageMarvel3").style.visibility === "hidden" && document.getElementById("imageMarvel4").style.visibility === "hidden" && document.getElementById("imageMarvel5").style.visibility === "hidden" && document.getElementById("imageMarvel6").style.visibility === "hidden" && document.getElementById("imageMarvel7").style.visibility === "hidden" && document.getElementById("imageMarvel8").style.visibility === "hidden" && document.getElementById("imageMarvel9").style.visibility === "hidden" && document.getElementById("imageMarvel10").style.visibility === "hidden" && document.getElementById("imageMarvel11").style.visibility === "hidden"){
+            document.getElementById("game").style.display = "none";
+            document.getElementById("window").style.display = "flex";
+            score.innerHTML = 6;
+        }
         if (nbClick < 2){
             nbClick++;
             clickCards(0);
@@ -103,11 +108,6 @@ for(let i = 0; i < cards.length; i++){
                 if (document.getElementById("imageMarvel10").style.display === "block" && document.getElementById("imageMarvel11").style.display === "block") {
                     image[i].style.display = "none";
                     conditionDubleCase("imageMarvel10", "imageMarvel11");
-                }
-                if (document.getElementById("imageMarvel0").style.visibility === "hidden" && document.getElementById("imageMarvel1").style.visibility === "hidden" && document.getElementById("imageMarvel2").style.visibility === "hidden" && document.getElementById("imageMarvel3").style.visibility === "hidden" && document.getElementById("imageMarvel4").style.visibility === "hidden" && document.getElementById("imageMarvel5").style.visibility === "hidden" && document.getElementById("imageMarvel6").style.visibility === "hidden" && document.getElementById("imageMarvel7").style.visibility === "hidden" && document.getElementById("imageMarvel8").style.visibility === "hidden" && document.getElementById("imageMarvel9").style.visibility === "hidden" && document.getElementById("imageMarvel10").style.visibility === "hidden" && document.getElementById("imageMarvel11").style.visibility === "hidden"){
-                    document.getElementById("game").style.display = "none";
-                    document.getElementById("window").style.display = "flex";
-                    score.innerHTML = 6;
                 }
                 else {
                     setTimeout(function () {
